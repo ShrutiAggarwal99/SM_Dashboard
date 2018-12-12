@@ -44,6 +44,8 @@
 
      </style>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.2.0/json2html.min.js"></script>
+
     <!-- ==== HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries ==== -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -112,7 +114,6 @@
 
                     <div class="main--content col-md-8 pb--30 float--right float--md-none" data-trigger="stickyScroll" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
                                 <h2 class="h4 fw--700 widget--title" style="margin-bottom:20px"><div>Trending Topic Now :</div></h2>
-
                     <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;"><div class="main--content-inner">
                                 <!-- Preloader Start -->
                             <div class="row MasonryRow" style="position: relative; height: 300.48px;">
@@ -120,11 +121,14 @@
                                      <div class="preloader--inner"></div>
                                  </div>
                              </div>
+
                             <div id="search_results">
                             <div class="row MasonryRow" style="position: relative; height: 1000.48px;">
 
                                 <!-- Preloader End -->
-                                <jsp:include page="${SHOW_LAYOUT}" />
+
+                                <%--<jsp:include page="${SHOW_LAYOUT}" />--%>
+                                <jsp:include page="showjson.jsp" />
 
                                 <div class="col-xs-12 pb--30" style="position: absolute; left: 0px; top: 1623px;">
                                     <!-- Page Count Start -->
@@ -613,4 +617,6 @@
 
     <!-- ==== Main Script ==== -->
     <script src="/static/template/SociFly - Multipurpose Social Network HTML5 Template_files/main.js"></script>
+
+
 </body></html>
