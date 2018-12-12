@@ -6,6 +6,7 @@ package com.clicdirectory.entity;
 public class MemberBase {
     public Long id;
     public String name;
+    public String phone;
     public String token;
     public String password;
     public String email;

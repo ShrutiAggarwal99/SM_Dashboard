@@ -33,17 +33,21 @@ public class AdminController extends BaseController {
       //  boolean t=new GenericDB<String>().updateColumn(com.clicdirectory.tables.Member.MEMBER.FB_TOKEN, "123", com.clicdirectory.tables.Member.MEMBER, com.clicdirectory.tables.Member.MEMBER.PASSWORD.eq("test"));
        // new GenericDB<Member>().addRow(com.clicdirectory.tables.Member.MEMBER,member);
         if(memberT!=null){
-            Member m =new GenericDB<Member>().getRow(com.clicdirectory.tables.Member.MEMBER,Member.class, com.clicdirectory.tables.Member.MEMBER.PASSWORD.eq(member.password).and(com.clicdirectory.tables.Member.MEMBER.EMAIL.eq(member.email)));
-            String  token = Randomizer.getRandomString(12);
-            new GenericDB<String>().updateColumn(com.clicdirectory.tables.Member.MEMBER.TOKEN, token, com.clicdirectory.tables.Member.MEMBER, com.clicdirectory.tables.Member.MEMBER.ID.eq(m.id));
-            Cookie cookie = new Cookie(ControllerUtils.TOKEN_COOKIE, token);
-            cookie.setPath("/");
-            cookie.setMaxAge(-1);
-            response.addCookie(cookie);
-            ControllerUtils.setUserSession(request,m);
-            return new ResponseMessage<MemberBase>("Login Successful","success",memberT);
+           setSession(request,response,memberT);
+           return new ResponseMessage<MemberBase>("Login Successful","success",memberT);
         }
         return new ResponseMessage<MemberBase>("Wrong email password combination","failed",memberT);
+    }
+
+    private void setSession( HttpServletRequest request,HttpServletResponse response, MemberBase member) {
+        Member m =new GenericDB<Member>().getRow(com.clicdirectory.tables.Member.MEMBER,Member.class, com.clicdirectory.tables.Member.MEMBER.PASSWORD.eq(member.password).and(com.clicdirectory.tables.Member.MEMBER.EMAIL.eq(member.email)));
+        String  token = Randomizer.getRandomString(12);
+        new GenericDB<String>().updateColumn(com.clicdirectory.tables.Member.MEMBER.TOKEN, token, com.clicdirectory.tables.Member.MEMBER, com.clicdirectory.tables.Member.MEMBER.ID.eq(m.id));
+        Cookie cookie = new Cookie(ControllerUtils.TOKEN_COOKIE, token);
+        cookie.setPath("/");
+        cookie.setMaxAge(-1);
+        response.addCookie(cookie);
+        ControllerUtils.setUserSession(request,m);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/fb_token")
@@ -56,11 +60,17 @@ public class AdminController extends BaseController {
         return "done";
     }
 
-
-
     @RequestMapping(method = RequestMethod.POST, value = "/signup")
-    public @ResponseBody Member apply1(@RequestBody Member member, ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
-        return new GenericDB<Member>().addRow(com.clicdirectory.tables.Member.MEMBER,member);
+    public @ResponseBody ResponseMessage<Member> apply1(@RequestBody Member member, ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
+        MemberBase memberT = new GenericDB<MemberBase>().getRow(com.clicdirectory.tables.Member.MEMBER,MemberBase.class, (com.clicdirectory.tables.Member.MEMBER.EMAIL.eq(member.email)));
+        if(memberT==null&&member.email!=null&&member.password!=null&&member.phone!=null){
+            member.role="admin";
+            Member member1 = new GenericDB<Member>().addRow(com.clicdirectory.tables.Member.MEMBER,member);
+            setSession(request,response, member1);
+            return new ResponseMessage<Member>("User Created","success",member1);
+        }else {
+            return new ResponseMessage<Member>("User Already exists !","failure",null);
+        }
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/welcome")

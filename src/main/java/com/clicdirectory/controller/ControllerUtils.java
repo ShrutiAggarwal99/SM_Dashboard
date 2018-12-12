@@ -27,7 +27,7 @@ public class ControllerUtils {
             for (Cookie cookie : cookies) {
                 if (cookie.getName().equals(TOKEN_COOKIE)) {
                     Member member = new GenericDB<Member>().getRow(Tables.MEMBER,Member.class, com.clicdirectory.tables.Member.MEMBER.TOKEN.eq(cookie.getValue()).and(com.clicdirectory.tables.Member.MEMBER.ROLE.eq("admin")));
-                    if (/*member != null && member.fb_token != null */ true ){ //.&& author.token_expire_time != null && author.token_expire_time > new Date().getTime()) {
+                    if (member != null/* && member.fb_token != null */ ){ //.&& author.token_expire_time != null && author.token_expire_time > new Date().getTime()) {
                         setUserSession(httpServletRequest, member);
                         return true;
                     }
@@ -38,9 +38,11 @@ public class ControllerUtils {
     }
 
     public static void setUserSession(HttpServletRequest httpServletRequest, Member team) {
-        httpServletRequest.getSession().setAttribute("I", team.email);
-        if ("admin".equals(team.role)) {
-            httpServletRequest.getSession().setAttribute("A", true);
+        if(team!=null){
+            httpServletRequest.getSession().setAttribute("I", team.email);
+            if ("admin".equals(team.role)) {
+                httpServletRequest.getSession().setAttribute("A", true);
+            }
         }
     }
 }
