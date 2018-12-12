@@ -123,12 +123,11 @@
                              </div>
 
                             <div id="search_results">
+                                <jsp:include page="showjson.jsp" />
                             <div class="row MasonryRow" style="position: relative; height: 1000.48px;">
 
                                 <!-- Preloader End -->
 
-                                <%--<jsp:include page="${SHOW_LAYOUT}" />--%>
-                                <jsp:include page="showjson.jsp" />
 
                                 <div class="col-xs-12 pb--30" style="position: absolute; left: 0px; top: 1623px;">
                                     <!-- Page Count Start -->
