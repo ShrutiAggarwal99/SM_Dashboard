@@ -23,21 +23,24 @@ public class ApplicationInterceptor implements HandlerInterceptor {
     private static final Logger logger = Logger.getLogger(ApplicationInterceptor.class);
 
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object handler) throws Exception {
-            Boolean isAdmin = ControllerUtils.isUserIAMMMAdmin(httpServletRequest);
-            if(isAdmin==null){
-                if(httpServletRequest.getRequestURI().equals("/")||httpServletRequest.getRequestURI().startsWith("/admin/login")||httpServletRequest.getRequestURI().startsWith("/admin/signup")){
-                    return true;
-                }else {
-                    httpServletResponse.sendRedirect("/");
-                    return false;
-                }
-            }else {
-                if(httpServletRequest.getRequestURI().equals("/")) {
-                    httpServletResponse.sendRedirect("/welcome");
-                    return false;
-                }
-            }
+        if(httpServletRequest.getRequestURI().startsWith("/static"))
             return true;
+
+        Boolean isAdmin = ControllerUtils.isUserIAMMMAdmin(httpServletRequest);
+        if(isAdmin==null){
+            if(httpServletRequest.getRequestURI().equals("/")||httpServletRequest.getRequestURI().startsWith("/admin/login")||httpServletRequest.getRequestURI().startsWith("/admin/signup")){
+                return true;
+            }else {
+                httpServletResponse.sendRedirect("/");
+                return false;
+            }
+        }else {
+            if(httpServletRequest.getRequestURI().equals("/")) {
+                httpServletResponse.sendRedirect("/welcome");
+                return false;
+            }
+        }
+        return true;
     }
 
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object handler, ModelAndView modelAndView)
