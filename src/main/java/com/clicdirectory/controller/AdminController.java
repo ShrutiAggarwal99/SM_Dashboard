@@ -3,6 +3,7 @@ package com.clicdirectory.controller;
 import com.clicdirectory.database.GenericDB;
 import com.clicdirectory.entity.Member;
 import com.clicdirectory.entity.MemberBase;
+import com.clicdirectory.entity.ResponseMessage;
 import com.clicdirectory.global.Randomizer;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -25,18 +26,9 @@ public class AdminController extends BaseController {
 
     private static Logger logger = Logger.getLogger(AdminController.class);
 
-    @RequestMapping(method = RequestMethod.GET, value = "/signup")
-    public String signup(ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
-        return "adminsignup";
-    }
-
-    @RequestMapping(method = RequestMethod.GET, value = "/login")
-    public String login(ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
-        return "adminlogin";
-    }
-
     @RequestMapping(method = RequestMethod.POST, value = "/login")
-    public @ResponseBody MemberBase apply(@RequestBody Member member, ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
+    public @ResponseBody
+    ResponseMessage<MemberBase> apply(@RequestBody Member member, ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
         MemberBase memberT = new GenericDB<MemberBase>().getRow(com.clicdirectory.tables.Member.MEMBER,MemberBase.class, com.clicdirectory.tables.Member.MEMBER.PASSWORD.eq(member.password).and(com.clicdirectory.tables.Member.MEMBER.EMAIL.eq(member.email)));
       //  boolean t=new GenericDB<String>().updateColumn(com.clicdirectory.tables.Member.MEMBER.FB_TOKEN, "123", com.clicdirectory.tables.Member.MEMBER, com.clicdirectory.tables.Member.MEMBER.PASSWORD.eq("test"));
        // new GenericDB<Member>().addRow(com.clicdirectory.tables.Member.MEMBER,member);
@@ -49,8 +41,9 @@ public class AdminController extends BaseController {
             cookie.setMaxAge(-1);
             response.addCookie(cookie);
             ControllerUtils.setUserSession(request,m);
+            return new ResponseMessage<MemberBase>("Login Successful","success",memberT);
         }
-        return memberT;
+        return new ResponseMessage<MemberBase>("Wrong email password combination","failed",memberT);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/fb_token")

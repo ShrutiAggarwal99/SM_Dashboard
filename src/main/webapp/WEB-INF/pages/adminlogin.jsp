@@ -220,7 +220,7 @@
             data: JSON.stringify(obj),
             contentType: 'application/json',
             success: function (response) {
-
+                console.log(response);
             },
             error: function (data) {
 
