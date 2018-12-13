@@ -14,7 +14,7 @@ sudo sh /opt/tomcat/bin/shutdown.sh
 echo "------------------------------ NGINX STOP ------------------------------";
 sudo service nginx stop
 echo "------------------------------ WEBAPP REPLACE ------------------------------";
-sudo cp /home/ubuntu/clicdirectory/target/ROOT.war /opt/tomcat/webapps/ROOT.war
+sudo cp /home/ubuntu/aap_project/target/aap.war /opt/tomcat/webapps/aap.war
 echo "------------------------------ TOMCAT START ------------------------------";
 sudo sh /opt/tomcat/bin/startup.sh
 echo "------------------------------ NGINX START  ------------------------------";
