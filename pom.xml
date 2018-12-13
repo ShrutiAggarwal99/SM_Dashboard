@@ -458,5 +458,19 @@
             </properties>
         </profile>
 
+        <profile>
+            <id>SERVER-LIVE</id>
+            <properties>
+                <DB_URL>jdbc:postgresql://localhost:5432/</DB_URL>
+                <BASE_DIR>/home/ubuntu/aap_project</BASE_DIR>
+                <DB_NAME>codingclub</DB_NAME>
+                <DB_USERNAME>postgres</DB_USERNAME>
+                <DB_PASSWORD>postgres</DB_PASSWORD>
+                <SERVER_DOMAIN>localhost:8080</SERVER_DOMAIN>
+                <PROFILE>LOCAL-AMAN</PROFILE>
+                <VARIABLE_RESOURCE_DIRECTORY>src/main/variableResources/local</VARIABLE_RESOURCE_DIRECTORY>
+            </properties>
+        </profile>
+
     </profiles>
 </project>
