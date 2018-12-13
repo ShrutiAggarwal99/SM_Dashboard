@@ -39,6 +39,33 @@ public class TemplateController extends BaseController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/welcome")
+    public static String welcome( ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
+        ArrayList<Post> posts = null;
+        String str = "contentpost.jsp";
+        if("fb".equals(request.getParameter("p"))){
+            str="fbpost.jsp";
+            posts= new Gson().fromJson(FileUtility.readFile(SysProperties.getBaseDir()+"/data/dummy/fbpost.txt"), new TypeToken<ArrayList<Post>>(){}.getType());
+            for(Post post:posts){
+                try {
+                    post.embedCode="<iframe src=\"https://www.facebook.com/plugins/video.php?href="+ URLEncoder.encode(post.url,"UTF-8")+"&show_text=1&width=560\" width=\"560\" height=\"446\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowTransparency=\"true\" allow=\"encrypted-media\" allowFullScreen=\"true\"></iframe>";
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+            }
+        }else if("yt".equals(request.getParameter("p"))){
+            str="post.jsp";
+            posts= new Gson().fromJson(FileUtility.readFile(SysProperties.getBaseDir()+"/data/dummy/post.txt"), new TypeToken<ArrayList<Post>>(){}.getType());
+        }
+        else {
+            posts= new Gson().fromJson(FileUtility.readFile(SysProperties.getBaseDir()+"/data/dummy/post.txt"), new TypeToken<ArrayList<Post>>(){}.getType());
+        }
+        modelMap.addAttribute("POSTS", posts);
+        modelMap.addAttribute("SHOW_LAYOUT",str);
+
+        return "/template/filter";
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/filter")
     public static String filter( ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
         ArrayList<Post> posts = null;
         String str = "contentpost.jsp";
