@@ -4,14 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- ==== Document Title ==== -->
-    <title>SociFly - Multipurpose Social Network HTML5 Template</title>
-
-    <!-- ==== Document Meta ==== -->
-    <meta name="author" content="ThemeLooks">
-    <meta name="description" content="Multipurpose Social Network HTML5 Template">
-    <meta name="keywords" content="social media, social network, forum, shop, bootstrap, html5, css3, template, responsive, retina ready">
-
     <!-- ==== Favicon ==== -->
     <link rel="icon" href="/socifly/html/favicon.png" type="image/png">
 
