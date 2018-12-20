@@ -13,7 +13,7 @@
         <TOMCAT_HOSTNAME></TOMCAT_HOSTNAME>
         <TOMCAT_PORT>8080</TOMCAT_PORT>
         <TOMCAT_URI>http://${TOMCAT_HOSTNAME}:${TOMCAT_PORT}/manager/text</TOMCAT_URI>
-        <WAR_NAME>aap</WAR_NAME>
+        <WAR_NAME>ROOT</WAR_NAME>
     </properties>
 
     <repositories>
@@ -264,7 +264,7 @@
                 </includes>
             </resource>
         </resources>
-        <finalName>aap</finalName>
+        <finalName>ROOT</finalName>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.cargo</groupId>
