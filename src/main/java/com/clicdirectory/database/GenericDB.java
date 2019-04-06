@@ -1,6 +1,7 @@
 package com.clicdirectory.database;
 
 import com.clicdirectory.controller.DatabaseConnection;
+import com.clicdirectory.entity.link;
 import org.jooq.*;
 import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
@@ -31,7 +32,7 @@ public class GenericDB<T> {
 
             if (condition != null) {
                 x = a.where(condition);
-            }
+            };
 
             if (limit == null) {
                 if (x == null) {

@@ -1,0 +1,383 @@
+/* Mixin for mobile boundries */
+/* Mixin for mobile boundries */
+/* Mixin for left aligned widgets */
+/* Default/light color theme */
+/* Default widget styles */
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+.pf-widget input[type=text]:-moz-placeholder,
+.pf-widget input[type=email]:-moz-placeholder,
+.pf-widget select:-moz-placeholder,
+.pf-widget textarea:-moz-placeholder {
+  /* Firefox 18- */
+}
+.pf-widget input[type=text]::-moz-placeholder,
+.pf-widget input[type=email]::-moz-placeholder,
+.pf-widget select::-moz-placeholder,
+.pf-widget textarea::-moz-placeholder {
+  /* Firefox 19+ */
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+/* Variant Styles */
+/* Type Styles */
+.pf-widget-modal {
+  /* Opened State Styles */
+  /* Variant Styles */
+  /* Type Styles */
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+.pf-widget-slideout {
+  /* Position Styles */
+  /* Opened State Styles */
+  /* Variant Styles */
+  /* Type Specific Styles */
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+/* Pushdown Styles */
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+.pf-widget-bar {
+  /* Position Styles */
+  /* Opened State Styles */
+  /* Variant Styles */
+  /* Type Specific Styles */
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+.pf-widget-button {
+  /* Position Styles */
+  /* Opened State Styles */
+}
+.pf-widget-inline {
+  /* variant specific styles */
+  /* type specific styles */
+}
+.pf-widget-modal.outreach-fall-resources {
+  /* Opened State Styles */
+  /* Variant Styles */
+  /* Type Styles */
+}
+.pf-widget-modal.outreach-fall-resources .pf-widget-btn {
+  background-color: #ec0000;
+  color: white;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  padding: 0px 10px 0px 10px;
+  line-height: 36px;
+  font-weight: bold;
+}
+.pf-widget-modal.outreach-fall-resources .pf-widget-content {
+  background-image: url('https://storage.googleapis.com/lioservices/2273-outreach/free-fall-resources-outreach_1.jpg');
+  background-size: cover;
+  padding-top: 525px;
+  padding-bottom: 0px;
+  max-width: 600px;
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+.pf-widget-modal.outreach-fall-resources .pf-widget-footer {
+  margin-top: 0px;
+}
+/* Default widget styles */
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+.pf-widget.outreach-fall-resources input[type=text]:-moz-placeholder,
+.pf-widget.outreach-fall-resources input[type=email]:-moz-placeholder,
+.pf-widget.outreach-fall-resources select:-moz-placeholder,
+.pf-widget.outreach-fall-resources textarea:-moz-placeholder {
+  /* Firefox 18- */
+}
+.pf-widget.outreach-fall-resources input[type=text]::-moz-placeholder,
+.pf-widget.outreach-fall-resources input[type=email]::-moz-placeholder,
+.pf-widget.outreach-fall-resources select::-moz-placeholder,
+.pf-widget.outreach-fall-resources textarea::-moz-placeholder {
+  /* Firefox 19+ */
+}
+.pf-widget.outreach-fall-resources .pf-widget-btn.pf-widget-cancel {
+  display: none;
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+/* Variant Styles */
+/* Type Styles */
+
+
+/***********************************************************************************
+************************************************************************************
+************************************************************************************/
+
+
+/* Mixin for mobile boundries */
+/* Mixin for mobile boundries */
+/* Mixin for left aligned widgets */
+/* Default/light color theme */
+/* Default widget styles */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+.pf-widget input[type=text]:-moz-placeholder,
+.pf-widget input[type=email]:-moz-placeholder,
+.pf-widget select:-moz-placeholder,
+.pf-widget textarea:-moz-placeholder {
+  /* Firefox 18- */
+}
+.pf-widget input[type=text]::-moz-placeholder,
+.pf-widget input[type=email]::-moz-placeholder,
+.pf-widget select::-moz-placeholder,
+.pf-widget textarea::-moz-placeholder {
+  /* Firefox 19+ */
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+/* Variant Styles */
+/* Type Styles */
+.pf-widget-modal {
+  /* Opened State Styles */
+  /* Variant Styles */
+  /* Type Styles */
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+.pf-widget-slideout {
+  /* Position Styles */
+  /* Opened State Styles */
+  /* Variant Styles */
+  /* Type Specific Styles */
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+/* Pushdown Styles */
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+.pf-widget-bar {
+  /* Position Styles */
+  /* Opened State Styles */
+  /* Variant Styles */
+  /* Type Specific Styles */
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+.pf-widget-button {
+  /* Position Styles */
+  /* Opened State Styles */
+}
+.pf-widget-inline {
+  /* variant specific styles */
+  /* type specific styles */
+}
+.pf-widget-modal.postcard {
+  /* Opened State Styles */
+  /* Variant Styles */
+  /* Type Styles */
+}
+.pf-widget-modal.postcard .pf-widget-content {
+  background-color: #eedc35;
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+.pf-widget-modal.postcard .pf-widget-message {
+  padding: 0 20px;
+  font-weight: bold;
+}
+.pf-widget-modal.postcard .pf-widget-body {
+  color: #111;
+}
+.pf-widget-modal.postcard form input[type="text"],
+.pf-widget-modal.postcard form input[type="email"],
+.pf-widget-modal.postcard form select {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.pf-widget-modal.postcard form input[type="text"] ::-webkit-input-placeholder,
+.pf-widget-modal.postcard form input[type="email"] ::-webkit-input-placeholder,
+.pf-widget-modal.postcard form select ::-webkit-input-placeholder {
+  /* Chrome */
+  color: #111;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.pf-widget-modal.postcard form input[type="text"] :-ms-input-placeholder,
+.pf-widget-modal.postcard form input[type="email"] :-ms-input-placeholder,
+.pf-widget-modal.postcard form select :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #111;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.pf-widget-modal.postcard form input[type="text"] ::-moz-placeholder,
+.pf-widget-modal.postcard form input[type="email"] ::-moz-placeholder,
+.pf-widget-modal.postcard form select ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #111;
+  font-weight: bold;
+  letter-spacing: 2px;
+  opacity: 1;
+}
+.pf-widget-modal.postcard form input[type="text"] :-moz-placeholder,
+.pf-widget-modal.postcard form input[type="email"] :-moz-placeholder,
+.pf-widget-modal.postcard form select :-moz-placeholder {
+  /* Firefox 4 - 18 */
+  color: #111;
+  font-weight: bold;
+  letter-spacing: 2px;
+  opacity: 1;
+}
+.pf-widget-modal.postcard.pf-widget-variant-2 .pf-widget-headline {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 4em;
+  color: #111;
+  margin-top: 78px;
+  line-height: 1;
+}
+.pf-widget-modal.postcard.pf-widget-variant-2 .pf-widget-img {
+  top: 0;
+  left: 0;
+  margin-left: auto;
+  width: 30%;
+  height: auto;
+  right: 0;
+  margin-right: auto;
+}
+.pf-widget-modal.postcard .label {
+  color: #111;
+  display: block;
+  margin-bottom: -24px;
+  margin-top: 80px;
+  font-size: 0.7em;
+}
+.pf-widget-modal.postcard .offer {
+  display: block;
+  color: #111;
+  font-size: 0.7em;
+}
+.pf-widget-modal.postcard .sub-header {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+.pf-widget-modal.postcard .newline {
+  display: block;
+}
+.pf-widget-modal.postcard .pf-widget-btn.pf-widget-cancel {
+  display: none;
+}
+/* Default widget styles */
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+.pf-widget.postcard input[type=text]:-moz-placeholder,
+.pf-widget.postcard input[type=email]:-moz-placeholder,
+.pf-widget.postcard select:-moz-placeholder,
+.pf-widget.postcard textarea:-moz-placeholder {
+  /* Firefox 18- */
+}
+.pf-widget.postcard input[type=text]::-moz-placeholder,
+.pf-widget.postcard input[type=email]::-moz-placeholder,
+.pf-widget.postcard select::-moz-placeholder,
+.pf-widget.postcard textarea::-moz-placeholder {
+  /* Firefox 19+ */
+}
+.pf-widget.postcard .pf-widget-img {
+  border-radius: 0;
+}
+.pf-widget.postcard .pf-widget-btn.pf-widget-ok {
+  color: #fff;
+  background-color: #111;
+  border-radius: 0;
+  margin-top: 80px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+}
+.pf-widget.postcard .pf-widget-btn.pf-widget-ok .yellow {
+  color: #eedc35;
+}
+.pf-widget.postcard .pf-widget-close {
+  background-color: #fff;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+}
+@media screen and (max-width: 736px), screen and (max-height: 640px) {
+}
+/* Variant Styles */
+/* Type Styles */
+.pf-form form.pf-custom-form ::-webkit-input-placeholder,
+.pf-sitegate form.pf-custom-form ::-webkit-input-placeholder {
+  /* Chrome */
+  color: #111;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.pf-form form.pf-custom-form :-ms-input-placeholder,
+.pf-sitegate form.pf-custom-form :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #111;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.pf-form form.pf-custom-form ::-moz-placeholder,
+.pf-sitegate form.pf-custom-form ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #111;
+  font-weight: bold;
+  letter-spacing: 2px;
+  opacity: 1;
+}
+.pf-form form.pf-custom-form :-moz-placeholder,
+.pf-sitegate form.pf-custom-form :-moz-placeholder {
+  /* Firefox 4 - 18 */
+  color: #111;
+  font-weight: bold;
+  letter-spacing: 2px;
+  opacity: 1;
+}

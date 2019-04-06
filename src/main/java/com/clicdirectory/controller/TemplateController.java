@@ -25,18 +25,29 @@ public class TemplateController extends BaseController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/")
     public static String home( ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
-        return "/template/signup";
+        return "homepage";
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/signup")
     public String signup(ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
-        return "adminsignup";
+        return "/template/signup";
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/login")
     public String login(ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
         return "adminlogin";
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/links")
+    public String links(ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
+        return "/template/links";
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/try")
+    public String link1s(ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
+        return "try";
+    }
+
 
     @RequestMapping(method = RequestMethod.GET, value = "/welcome")
     public static String welcome( ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {

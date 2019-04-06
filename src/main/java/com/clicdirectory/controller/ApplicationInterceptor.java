@@ -28,6 +28,7 @@ public class ApplicationInterceptor implements HandlerInterceptor {
 
         Boolean isAdmin = ControllerUtils.isUserIAMMMAdmin(httpServletRequest);
         if(isAdmin==null){
+
             if(httpServletRequest.getRequestURI().equals("/")||httpServletRequest.getRequestURI().startsWith("/admin/login")||httpServletRequest.getRequestURI().startsWith("/admin/signup")){
                 return true;
             }else {

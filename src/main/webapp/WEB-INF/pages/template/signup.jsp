@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,9 +7,9 @@
 
     <!-- Stylesheets
     ================================================= -->
-		<link rel="stylesheet" href="/static/template/Friend Finder _ A Complete Social Network Template_files/bootstrap.min.css">
-		<link rel="stylesheet" href="/static/template/Friend Finder _ A Complete Social Network Template_files/style.css">
-		<link rel="stylesheet" href="/static/template/Friend Finder _ A Complete Social Network Template_files/ionicons.min.css">
+	<link rel="stylesheet" href="/static/template/Friend Finder _ A Complete Social Network Template_files/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/template/Friend Finder _ A Complete Social Network Template_files/style.css">
+	<link rel="stylesheet" href="/static/template/Friend Finder _ A Complete Social Network Template_files/ionicons.min.css">
     <link rel="stylesheet" href="/static/template/Friend Finder _ A Complete Social Network Template_files/font-awesome.min.css">
 
     <!--Google Font-->
@@ -144,6 +143,8 @@
                 <ul class="nav nav-tabs">
                   <li class="active"><a href="/friend-finder/index-register.html#register" data-toggle="tab">Register</a></li>
                   <li><a href="/friend-finder/index-register.html#login" data-toggle="tab">Login</a></li>
+
+
                 </ul><!--Tabs End-->
               </div>
 
@@ -156,25 +157,26 @@
                   <form name="registration_form" id="registration_form" class="form-inline">
                     <div class="row">
                       <div class="form-group col-xs-12">
-                        <label for="email" class="sr-only">Email</label>
-                        <input id="email" class="form-control input-group-lg" type="text" name="Email" title="Enter Email" placeholder="Your Email">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="form-group col-xs-12">
                         <label for="phone" class="sr-only">Phone</label>
                         <input id="phone" class="form-control input-group-lg" type="text" name="Phone" title="Enter Phone" placeholder="Example:99876543210">
                       </div>
                     </div>
                     <div class="row">
                       <div class="form-group col-xs-12">
+                        <label for="my-email" class="sr-only">Email</label>
+                        <input id="email" class="form-control input-group-lg" type="text" name="Email" title="Enter Email" placeholder="Your Email">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div  class="form-group col-xs-12">
                         <label for="password" class="sr-only">Password</label>
                         <input id="password" class="form-control input-group-lg" type="password" name="password" title="Enter password" placeholder="Password">
                       </div>
                     </div>
+                    <button onclick="signup1(this)" class="btn btn-primary">Register Now</button>
+
                   </form><!--Register Now Form Ends-->
                   <p style="color:red" class="error-signup"></p>
-                  <button onclick="signup(this)" class="btn btn-primary">Register Now</button>
                 </div><!--Registration Form Contents Ends-->
 
                 <!--Login-->
@@ -261,48 +263,47 @@ function validateEmail(email) {
   }
 
  function sendDataToServer(button,data,url,validate,errorDisplay,onSuccess,onFailure,props){
-        $(button).prop('disabled', true);
-        $(errorDisplay).html("");
-        var btnText = $(button).html();
+         $(button).prop('disabled', true);
+         $(errorDisplay).html("");
+         var btnText = $(button).html();
 
-        var applyWait = setInterval(function(){
-            button.innerHTML=("WAIT "+([".","..","...","...."][parseInt((new Date().getTime()%1000)/334)]));
-        },100);
+         var applyWait = setInterval(function(){
+             button.innerHTML=("WAIT "+([".","..","...","...."][parseInt((new Date().getTime()%1000)/334)]));
+         },100);
 
-        if(validate.length>0){
-            $(errorDisplay).html(validate);
-            $(button).prop('disabled', false);
-            button.innerHTML=(btnText);
-            clearWaitApply(applyWait);
-            return;
-        }
+         if(validate.length>0){
+             $(errorDisplay).html(validate);
+             $(button).prop('disabled', false);
+             button.innerHTML=(btnText);
+             clearWaitApply(applyWait);
+             return;
+         }
 
-        $(errorDisplay).html("");
+         $(errorDisplay).html("");
 
-        if(!!props&&!!props.redirect){
-                window.location.href=url;
-        }else{
-            $.ajax({
-                 type: "POST",
-                 url: url,
-                 data: JSON.stringify(data),
-                 contentType: 'application/json',
-                 success: function(response) {
-                    if(!!onSuccess&&typeof onSuccess ==="function"){
-                        onSuccess(response);
-                    }
-                    onTaskEnd(button,applyWait,btnText);
-                 },
-                 error:function(data){
-                    if(!!onFailure&&typeof onFailure ==="function"){
-                        onFailure();
-                    }
-                    onTaskEnd(button,applyWait,btnText);
-                 }
-            });
-        }
-     };
-
+         if(!!props&&!!props.redirect){
+                 window.location.href=url;
+         }else{
+             $.ajax({
+                  type: "POST",
+                  url: url,
+                  data: JSON.stringify(data),
+                  contentType: 'application/json',
+                  success: function(response) {
+                     if(!!onSuccess&&typeof onSuccess ==="function"){
+                         onSuccess(response);
+                     }
+                     onTaskEnd(button,applyWait,btnText);
+                  },
+                  error:function(data){
+                     if(!!onFailure&&typeof onFailure ==="function"){
+                         onFailure();
+                     }
+                     onTaskEnd(button,applyWait,btnText);
+                  }
+             });
+         }
+      };
 
     function login(button){
         var phone,password,email,update="";
@@ -325,22 +326,25 @@ function validateEmail(email) {
     };
 
 
-    function signup(button){
-
-        var update="",phone,password,email;
+    function signup1(button){
+        console.log(2134);
+        var update="",phone,email,password;
+        phone=$("#phone").val();
         email=$("#email").val();
         password=$("#password").val();
-        phone=$("#phone").val();
-        var data={"email":email,"password":password,"phone":phone};
+
+        var data={"phone":phone,"password":password,"email":email};
 
         if(!email)update += "Your email is required. ";
         if(!phone)update += "Your phone is required. ";
         if(!password)update += "Your password is required. ";
         if(!!email&&!validateEmail(email))update += "Your email is invalid. ";
 
+        console.log(2134);
         function handleResponse(response) {
             if(response.type==="success"){
-                window.location.href="/welcome";
+                console.log(2134);
+                window.location.href="/p1";
             }else{
                 $(".error-signup").html(response.message);
             }
@@ -348,6 +352,5 @@ function validateEmail(email) {
         sendDataToServer(button,data,"/admin/signup",update,$(".error-signup"),handleResponse);
     };
 </script>
-
 
 </body></html>

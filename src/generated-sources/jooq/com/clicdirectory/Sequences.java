@@ -14,17 +14,7 @@ package com.clicdirectory;
 public class Sequences {
 
 	/**
-	 * The sequence <code>public.albums_id_seq</code>
-	 */
-	public static final org.jooq.Sequence<java.lang.Long> ALBUMS_ID_SEQ = new org.jooq.impl.SequenceImpl<java.lang.Long>("albums_id_seq", com.clicdirectory.Public.PUBLIC, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
-
-	/**
 	 * The sequence <code>public.member_id_seq</code>
 	 */
 	public static final org.jooq.Sequence<java.lang.Long> MEMBER_ID_SEQ = new org.jooq.impl.SequenceImpl<java.lang.Long>("member_id_seq", com.clicdirectory.Public.PUBLIC, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
-
-	/**
-	 * The sequence <code>public.songs_id_seq</code>
-	 */
-	public static final org.jooq.Sequence<java.lang.Long> SONGS_ID_SEQ = new org.jooq.impl.SequenceImpl<java.lang.Long>("songs_id_seq", com.clicdirectory.Public.PUBLIC, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 }

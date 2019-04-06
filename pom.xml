@@ -445,15 +445,15 @@
         </profile>
 
         <profile>
-            <id>LOCAL-AMAN</id>
+            <id>LOCAL-NISHANT</id>
             <properties>
                 <DB_URL>jdbc:postgresql://localhost:5432/</DB_URL>
-                <BASE_DIR>/home/aman/VOCIQ/project2/basic</BASE_DIR>
-                <DB_NAME>codingclub</DB_NAME>
+                <BASE_DIR>/home/rashu/Downloads/Badla.(2019).1-3.Pre.Rip.x264.AC3-Team.DUS/basic</BASE_DIR>
+                <DB_NAME>postgres</DB_NAME>
                 <DB_USERNAME>postgres</DB_USERNAME>
-                <DB_PASSWORD>postgres</DB_PASSWORD>
+                <DB_PASSWORD>Sapana99@</DB_PASSWORD>
                 <SERVER_DOMAIN>localhost:8080</SERVER_DOMAIN>
-                <PROFILE>LOCAL-AMAN</PROFILE>
+                <PROFILE>LOCAL-NISHANT</PROFILE>
                 <VARIABLE_RESOURCE_DIRECTORY>src/main/variableResources/local</VARIABLE_RESOURCE_DIRECTORY>
             </properties>
         </profile>

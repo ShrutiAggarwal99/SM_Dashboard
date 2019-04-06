@@ -17,8 +17,8 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <mvc:interceptors>
-        <bean class="com.clicdirectory.controller.ApplicationInterceptor"/>
-    </mvc:interceptors>
+    <!--<mvc:interceptors>-->
+        <!--<bean class="com.clicdirectory.controller.ApplicationInterceptor"/>-->
+    <!--</mvc:interceptors>-->
 
 </beans>
